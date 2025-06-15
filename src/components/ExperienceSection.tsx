@@ -3,6 +3,7 @@ import React from 'react';
 import Section from './Section';
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '@/components/ui/card';
 import { Brain, Cpu, Wrench } from 'lucide-react';
+import { cn } from '@/lib/utils';
 
 const experiences = [
   {
@@ -33,20 +34,29 @@ const ExperienceSection = () => {
     <Section id="experience" title="My Experience">
       <div className="relative max-w-3xl mx-auto">
         <div className="absolute left-1/2 -translate-x-1/2 w-0.5 h-full bg-border" aria-hidden="true"></div>
-        <div className="space-y-8">
+        <div>
           {experiences.map((exp, index) => {
             const Icon = exp.icon;
             return (
-              <div key={index} className="relative flex items-center odd:flex-row-reverse group">
-                <div className="absolute left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-primary border-4 border-background"></div>
+              <div
+                key={index}
+                className={cn(
+                  'relative flex items-center odd:flex-row-reverse group',
+                  index > 0 && '-mt-12',
+                  'transition-all duration-300 hover:z-10'
+                )}
+              >
+                <div className="absolute left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-primary border-4 border-background z-10"></div>
                 <div className="w-[calc(50%-2rem)]">
-                  <Card className="bg-transparent shadow-none border-border group-hover:border-primary transition-all duration-300 group-hover:shadow-xl group-hover:-translate-y-1">
+                  <Card className="bg-card shadow-lg border-border group-hover:border-primary transition-all duration-300 group-hover:shadow-xl group-hover:-translate-y-1">
                     <CardHeader>
                       <div className="flex items-start gap-4">
                         <Icon className="w-10 h-10 text-primary flex-shrink-0 mt-1" />
                         <div>
                           <CardTitle>{exp.role}</CardTitle>
-                          <CardDescription>{exp.company} | {exp.period}</CardDescription>
+                          <CardDescription>
+                            {exp.company} | {exp.period}
+                          </CardDescription>
                         </div>
                       </div>
                     </CardHeader>
