@@ -1,7 +1,6 @@
 
 import React from 'react';
 import Section from './Section';
-import { Card } from '@/components/ui/card';
 import {
   Tooltip,
   TooltipContent,
@@ -28,13 +27,17 @@ const SkillsSection = () => {
   return (
     <Section id="skills" title="My Skills">
       <TooltipProvider delayDuration={100}>
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
+        <div className="flex flex-wrap justify-center items-center gap-4 md:gap-6">
           {skills.map((skill) => (
             <Tooltip key={skill.name}>
               <TooltipTrigger asChild>
-                <Card className="group p-6 flex items-center justify-center aspect-square transition-all duration-300 border-border/80 hover:border-primary hover:shadow-xl hover:-translate-y-1">
-                  <img src={skill.icon} alt={skill.name} className="h-10 w-10 sm:h-12 sm:w-12 transition-transform duration-300 group-hover:scale-110" />
-                </Card>
+                <div
+                  className="group w-28 h-[129px] flex items-center justify-center cursor-pointer"
+                >
+                  <div className="clip-hexagon w-full h-full bg-card group-hover:bg-primary/10 border border-border/80 group-hover:border-primary transition-all duration-300 flex items-center justify-center">
+                    <img src={skill.icon} alt={skill.name} className="h-9 w-9 transition-transform duration-300 group-hover:scale-110" />
+                  </div>
+                </div>
               </TooltipTrigger>
               <TooltipContent>
                 <p>{skill.name}</p>
