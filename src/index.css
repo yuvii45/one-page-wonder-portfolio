@@ -1,4 +1,3 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -61,26 +60,26 @@
     --ring: 210 90% 65%;
   }
 
-  .synthwave {
-    --background: 240 30% 96%;
-    --foreground: 240 20% 15%;
+  .forest {
+    --background: 220 30% 96%;
+    --foreground: 120 25% 15%;
     --card: 0 0% 100%;
-    --card-foreground: 240 20% 15%;
+    --card-foreground: 120 25% 15%;
     --popover: 0 0% 100%;
-    --popover-foreground: 240 20% 15%;
-    --primary: 330 90% 60%;
-    --primary-foreground: 330 100% 98%;
-    --secondary: 180 90% 55%;
-    --secondary-foreground: 240 20% 10%;
-    --muted: 240 30% 92%;
-    --muted-foreground: 240 10% 45%;
-    --accent: 280 90% 65%;
-    --accent-foreground: 280 100% 98%;
+    --popover-foreground: 120 25% 15%;
+    --primary: 130 40% 45%;
+    --primary-foreground: 130 100% 98%;
+    --secondary: 40 40% 55%;
+    --secondary-foreground: 40 20% 10%;
+    --muted: 220 30% 92%;
+    --muted-foreground: 120 10% 45%;
+    --accent: 100 50% 60%;
+    --accent-foreground: 100 100% 98%;
     --destructive: 0 70% 55%;
     --destructive-foreground: 0 0% 98%;
-    --border: 240 20% 88%;
-    --input: 240 20% 88%;
-    --ring: 330 90% 60%;
+    --border: 220 20% 88%;
+    --input: 220 20% 88%;
+    --ring: 130 40% 45%;
   }
 }
 
