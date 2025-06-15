@@ -27,68 +27,32 @@ const SkillsSection = () => {
   return (
     <Section id="skills" title="My Skills">
       <TooltipProvider delayDuration={100}>
-        <div className="relative max-w-6xl mx-auto">
-          {/* Central glow effect */}
-          <div className="absolute inset-0 flex items-center justify-center">
-            <div className="w-32 h-32 bg-primary/10 rounded-full blur-3xl animate-pulse"></div>
-          </div>
-          
-          {/* Skills constellation */}
-          <div className="skill-constellation relative min-h-[600px] flex items-center justify-center">
-            {skills.map((skill, index) => {
-              // Create a more balanced circular constellation pattern
-              const angle = (index * 360) / skills.length;
-              // Use different radii for inner and outer rings
-              const radius = index < 6 ? 120 : 200;
-              const x = Math.cos((angle * Math.PI) / 180) * radius;
-              const y = Math.sin((angle * Math.PI) / 180) * radius;
-              
-              console.log(`Skill ${skill.name} at index ${index}: angle=${angle}, radius=${radius}, x=${x}, y=${y}`);
-              
-              return (
-                <Tooltip key={skill.name}>
-                  <TooltipTrigger asChild>
-                    <div
-                      className="absolute group cursor-pointer opacity-100"
-                      style={{
-                        left: '50%',
-                        top: '50%',
-                        transform: `translate(calc(-50% + ${x}px), calc(-50% + ${y}px))`,
-                      }}
-                    >
-                      <div className="relative">
-                        {/* Glowing background */}
-                        <div className="absolute inset-0 bg-primary/20 rounded-full blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 scale-150"></div>
-                        
-                        {/* Main skill bubble */}
-                        <div className="relative w-16 h-16 bg-card/80 backdrop-blur-sm border border-border/30 rounded-full flex items-center justify-center shadow-lg group-hover:shadow-primary/25 group-hover:shadow-xl group-hover:scale-110 group-hover:bg-card transition-all duration-300">
-                          <img 
-                            src={skill.icon} 
-                            alt={skill.name} 
-                            className="h-8 w-8 transition-transform duration-300 group-hover:scale-110" 
-                          />
-                        </div>
-                        
-                        {/* Connecting lines to center (subtle) */}
-                        <div 
-                          className="absolute w-px bg-gradient-to-r from-transparent via-border/20 to-transparent opacity-30 group-hover:opacity-60 transition-opacity duration-300"
-                          style={{
-                            height: `${radius}px`,
-                            left: '50%',
-                            top: '50%',
-                            transformOrigin: 'top',
-                            transform: `rotate(${angle + 180}deg)`,
-                          }}
-                        ></div>
+        <div className="max-w-4xl mx-auto">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
+            {skills.map((skill, index) => (
+              <Tooltip key={skill.name}>
+                <TooltipTrigger asChild>
+                  <div className="group cursor-pointer">
+                    <div className="relative">
+                      {/* Glowing background */}
+                      <div className="absolute inset-0 bg-primary/20 rounded-full blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 scale-150"></div>
+                      
+                      {/* Main skill bubble */}
+                      <div className="relative w-16 h-16 bg-card/80 backdrop-blur-sm border border-border/30 rounded-full flex items-center justify-center shadow-lg group-hover:shadow-primary/25 group-hover:shadow-xl group-hover:scale-110 group-hover:bg-card transition-all duration-300">
+                        <img 
+                          src={skill.icon} 
+                          alt={skill.name} 
+                          className="h-8 w-8 transition-transform duration-300 group-hover:scale-110" 
+                        />
                       </div>
                     </div>
-                  </TooltipTrigger>
-                  <TooltipContent side="top" className="bg-card/90 backdrop-blur-sm border-border/50">
-                    <p className="font-medium">{skill.name}</p>
-                  </TooltipContent>
-                </Tooltip>
-              );
-            })}
+                  </div>
+                </TooltipTrigger>
+                <TooltipContent side="top" className="bg-card/90 backdrop-blur-sm border-border/50">
+                  <p className="font-medium">{skill.name}</p>
+                </TooltipContent>
+              </Tooltip>
+            ))}
           </div>
         </div>
       </TooltipProvider>
