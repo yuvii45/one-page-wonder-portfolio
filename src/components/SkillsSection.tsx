@@ -27,18 +27,19 @@ const SkillsSection = () => {
   return (
     <Section id="skills" title="My Skills">
       <TooltipProvider delayDuration={100}>
-        <div className="relative max-w-5xl mx-auto">
+        <div className="relative max-w-6xl mx-auto">
           {/* Central glow effect */}
           <div className="absolute inset-0 flex items-center justify-center">
             <div className="w-32 h-32 bg-primary/10 rounded-full blur-3xl animate-pulse"></div>
           </div>
           
           {/* Skills constellation */}
-          <div className="skill-constellation relative min-h-[500px] flex items-center justify-center">
+          <div className="skill-constellation relative min-h-[600px] flex items-center justify-center">
             {skills.map((skill, index) => {
-              // Create a circular constellation pattern
+              // Create a more balanced circular constellation pattern
               const angle = (index * 360) / skills.length;
-              const radius = index < 6 ? 140 : 220; // Two rings
+              // Use different radii for inner and outer rings
+              const radius = index < 6 ? 120 : 200;
               const x = Math.cos((angle * Math.PI) / 180) * radius;
               const y = Math.sin((angle * Math.PI) / 180) * radius;
               
