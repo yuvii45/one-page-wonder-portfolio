@@ -38,11 +38,11 @@ const SkillsSection = () => {
                       <div className="absolute inset-0 bg-primary/20 rounded-full blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 scale-150"></div>
                       
                       {/* Main skill bubble */}
-                      <div className="relative w-10 h-10 bg-card/80 backdrop-blur-sm border border-border/30 rounded-full flex items-center justify-center shadow-lg group-hover:shadow-primary/25 group-hover:shadow-xl group-hover:scale-110 group-hover:bg-card transition-all duration-300">
+                      <div className="relative w-12 h-12 bg-card/80 backdrop-blur-sm border border-border/30 rounded-full flex items-center justify-center shadow-lg group-hover:shadow-primary/25 group-hover:shadow-xl group-hover:scale-110 group-hover:bg-card transition-all duration-300">
                         <img 
                           src={skill.icon} 
                           alt={skill.name} 
-                          className="h-6 w-6 transition-transform duration-300 group-hover:scale-110" 
+                          className="h-8 w-8 transition-transform duration-300 group-hover:scale-110" 
                         />
                       </div>
                     </div>

@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { TypeAnimation } from 'react-type-animation';
@@ -10,6 +11,11 @@ const HomeSection = () => {
       <div className="absolute bottom-1/4 right-1/4 w-72 h-72 bg-accent/10 rounded-full filter blur-3xl opacity-30 animate-blob" style={{ animationDelay: '2s' }}></div>
 
       <div className="relative z-10 p-4">
+        <div className="flex justify-center mb-6">
+          <div className="w-40 h-40 rounded-lg overflow-hidden border-4 border-primary/20 shadow-xl bg-card">
+            <img src="/placeholder.svg" alt="Yuvraj Parekh" className="w-full h-full object-cover" />
+          </div>
+        </div>
         <h1 className="text-4xl md:text-6xl font-bold font-heading mb-4 text-primary" style={{ animation: 'fade-in 0.5s ease-out forwards' }}>
           Yuvraj Parekh
         </h1>
