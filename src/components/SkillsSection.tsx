@@ -27,8 +27,8 @@ const SkillsSection = () => {
   return (
     <Section id="skills" title="My Skills">
       <TooltipProvider delayDuration={100}>
-        <div className="max-w-2xl mx-auto">
-          <div className="grid grid-cols-4 sm:grid-cols-6 md:grid-cols-6 gap-1">
+        <div className="flex justify-center">
+          <div className="grid grid-cols-4 sm:grid-cols-6 md:grid-cols-6 gap-x-1 gap-y-1 w-fit">
             {skills.map((skill, index) => (
               <Tooltip key={skill.name}>
                 <TooltipTrigger asChild>
@@ -42,7 +42,7 @@ const SkillsSection = () => {
                         <img 
                           src={skill.icon} 
                           alt={skill.name} 
-                          className="h-5 w-5 transition-transform duration-300 group-hover:scale-110" 
+                          className="h-6 w-6 transition-transform duration-300 group-hover:scale-110" 
                         />
                       </div>
                     </div>
