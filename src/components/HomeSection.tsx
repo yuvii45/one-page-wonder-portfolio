@@ -1,11 +1,10 @@
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { TypeAnimation } from 'react-type-animation';
 
 const HomeSection = () => {
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center text-center bg-grid-pattern relative">
+    <section id="home" className="min-h-screen flex items-center justify-center text-center relative">
       <div className="relative z-10 p-4">
         <h1 className="text-5xl md:text-7xl font-bold font-heading mb-4 text-primary" style={{ animation: 'fade-in 0.5s ease-out forwards' }}>
           Yuvraj Parekh
