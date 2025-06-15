@@ -31,7 +31,7 @@ const BlogSection = () => {
     <Section id="blog" title="From My Blog">
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         {blogPosts.map((post, index) => (
-          <Card key={index} className="overflow-hidden bg-secondary border-border hover:border-primary transition-all duration-300 hover:shadow-lg hover:-translate-y-1 flex flex-col">
+          <Card key={index} className="overflow-hidden bg-card border-border hover:border-primary transition-all duration-300 hover:shadow-lg hover:-translate-y-1 flex flex-col">
             <img src={post.imageUrl} alt={post.title} className="w-full h-48 object-cover" />
             <CardHeader>
               <CardTitle>{post.title}</CardTitle>
