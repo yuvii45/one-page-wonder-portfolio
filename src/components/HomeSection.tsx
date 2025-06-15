@@ -25,7 +25,6 @@ const HomeSection = () => {
           wrapper="p"
           speed={50}
           className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto min-h-16"
-          style={{ animation: 'fade-in 0.5s ease-out 0.2s forwards', opacity: 0 }}
           repeat={Infinity}
         />
         <div className="flex justify-center gap-4" style={{ animation: 'fade-in 0.5s ease-out 0.4s forwards', opacity: 0 }}>
