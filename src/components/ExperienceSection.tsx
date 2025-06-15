@@ -33,7 +33,7 @@ const ExperienceSection = () => {
     <Section id="experience" title="My Experience">
       <div className="relative max-w-3xl mx-auto">
         <div className="absolute left-1/2 -translate-x-1/2 w-0.5 h-full bg-border" aria-hidden="true"></div>
-        <div className="space-y-12">
+        <div className="space-y-8">
           {experiences.map((exp, index) => {
             const Icon = exp.icon;
             return (
