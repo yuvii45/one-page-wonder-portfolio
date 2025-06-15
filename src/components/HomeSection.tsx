@@ -16,13 +16,13 @@ const navLinks = [
 
 const HomeSection = ({ activeSection }: { activeSection: string }) => {
   return (
-    <section id="home" className="h-auto md:h-screen flex flex-col text-center relative p-8 md:p-12 overflow-hidden bg-background">
+    <section id="home" className="h-auto md:h-screen flex flex-col text-center relative p-8 md:py-6 md:px-12 overflow-hidden bg-background">
       <div className="absolute top-6 right-6 z-20">
         <ThemeToggle />
       </div>
 
       {/* Main content area */}
-      <div className="flex-grow flex flex-col items-center justify-center relative z-10 py-8">
+      <div className="flex-grow flex flex-col items-center justify-center relative z-10 py-4">
         <div className="flex justify-center mb-6">
           <div className="w-40 h-40 rounded-lg overflow-hidden border-4 border-primary/20 shadow-xl bg-card">
             <img src="/placeholder.svg" alt="Yuvraj Parekh" className="w-full h-full object-cover" />
