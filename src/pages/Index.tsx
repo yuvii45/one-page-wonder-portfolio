@@ -11,7 +11,7 @@ import SkillsSection from '@/components/SkillsSection';
 
 const Index = () => {
   return (
-    <div className="text-foreground bg-fancy-pattern">
+    <div className="text-foreground">
       <Header />
       <main>
         <HomeSection />
