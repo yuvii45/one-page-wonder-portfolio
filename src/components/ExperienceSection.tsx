@@ -39,7 +39,7 @@ const ExperienceSection = () => {
             return (
               <div key={index} className="relative flex items-center odd:flex-row-reverse group">
                 <div className="absolute left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-primary border-4 border-background"></div>
-                <div className="w-[calc(50%+2rem)] group-hover:z-10">
+                <div className="w-[calc(50%-2rem)]">
                   <Card className="bg-transparent shadow-none border-border group-hover:border-primary transition-all duration-300 group-hover:shadow-xl group-hover:-translate-y-1">
                     <CardHeader>
                       <div className="flex items-start gap-4">
