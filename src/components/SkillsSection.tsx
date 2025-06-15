@@ -27,25 +27,67 @@ const SkillsSection = () => {
   return (
     <Section id="skills" title="My Skills">
       <TooltipProvider delayDuration={100}>
-        <div className="flex flex-wrap justify-center items-center gap-1 max-w-4xl mx-auto">
-          {skills.map((skill, index) => (
-            <Tooltip key={skill.name}>
-              <TooltipTrigger asChild>
-                <div
-                  className={`group w-20 h-[92px] flex items-center justify-center cursor-pointer ${
-                    index % 2 === 1 ? 'translate-y-6' : ''
-                  }`}
-                >
-                  <div className="clip-hexagon w-full h-full bg-card group-hover:bg-primary/10 border border-border/50 group-hover:border-primary transition-all duration-300 flex items-center justify-center">
-                    <img src={skill.icon} alt={skill.name} className="h-7 w-7 transition-transform duration-300 group-hover:scale-110" />
-                  </div>
-                </div>
-              </TooltipTrigger>
-              <TooltipContent>
-                <p>{skill.name}</p>
-              </TooltipContent>
-            </Tooltip>
-          ))}
+        <div className="relative max-w-5xl mx-auto">
+          {/* Central glow effect */}
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="w-32 h-32 bg-primary/10 rounded-full blur-3xl animate-pulse"></div>
+          </div>
+          
+          {/* Skills constellation */}
+          <div className="skill-constellation relative min-h-[500px] flex items-center justify-center">
+            {skills.map((skill, index) => {
+              // Create a circular constellation pattern
+              const angle = (index * 360) / skills.length;
+              const radius = index < 6 ? 140 : 220; // Two rings
+              const x = Math.cos((angle * Math.PI) / 180) * radius;
+              const y = Math.sin((angle * Math.PI) / 180) * radius;
+              
+              return (
+                <Tooltip key={skill.name}>
+                  <TooltipTrigger asChild>
+                    <div
+                      className="absolute group cursor-pointer animate-fade-in"
+                      style={{
+                        left: '50%',
+                        top: '50%',
+                        transform: `translate(calc(-50% + ${x}px), calc(-50% + ${y}px))`,
+                        animationDelay: `${index * 0.1}s`,
+                      }}
+                    >
+                      <div className="relative">
+                        {/* Glowing background */}
+                        <div className="absolute inset-0 bg-primary/20 rounded-full blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 scale-150"></div>
+                        
+                        {/* Main skill bubble */}
+                        <div className="relative w-16 h-16 bg-card/80 backdrop-blur-sm border border-border/30 rounded-full flex items-center justify-center shadow-lg group-hover:shadow-primary/25 group-hover:shadow-xl group-hover:scale-110 group-hover:bg-card transition-all duration-300">
+                          <img 
+                            src={skill.icon} 
+                            alt={skill.name} 
+                            className="h-8 w-8 transition-transform duration-300 group-hover:scale-110" 
+                          />
+                        </div>
+                        
+                        {/* Connecting lines to center (subtle) */}
+                        <div 
+                          className="absolute w-px bg-gradient-to-r from-transparent via-border/20 to-transparent opacity-30 group-hover:opacity-60 transition-opacity duration-300"
+                          style={{
+                            height: `${radius}px`,
+                            left: '50%',
+                            top: '50%',
+                            transformOrigin: 'top',
+                            transform: `rotate(${angle + 180}deg)`,
+                          }}
+                        ></div>
+                      </div>
+                    </div>
+                  </TooltipTrigger>
+                  <TooltipContent side="top" className="bg-card/90 backdrop-blur-sm border-border/50">
+                    <p className="font-medium">{skill.name}</p>
+                  </TooltipContent>
+                </Tooltip>
+              );
+            })}
+          </div>
         </div>
       </TooltipProvider>
     </Section>
