@@ -6,11 +6,7 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  // IMPORTANT: You must replace `<YOUR_REPOSITORY_NAME>` with the name of your GitHub repository.
-  // For example, if your repository URL is https://github.com/your-username/my-cool-site,
-  // the base should be '/my-cool-site/'.
-  // This is a crucial step for the deployment to work correctly.
-  base: "/<YOUR_REPOSITORY_NAME>/",
+  base: "/",
   server: {
     host: "::",
     port: 8080,
