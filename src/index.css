@@ -73,18 +73,18 @@
     background-color: hsl(var(--background));
     background-image: radial-gradient(
         circle at 15% 50%,
-        hsl(var(--primary) / 0.2),
-        transparent 50%
+        hsl(var(--primary) / 0.3),
+        transparent 40%
       ),
       radial-gradient(
         circle at 85% 40%,
-        hsl(var(--accent) / 0.2),
-        transparent 50%
+        hsl(var(--accent) / 0.3),
+        transparent 40%
       ),
       radial-gradient(
         circle at 50% 80%,
-        hsl(var(--secondary) / 0.15),
-        transparent 50%
+        hsl(var(--secondary) / 0.25),
+        transparent 40%
       );
     background-size: 200% 200%;
     animation: animated-gradient 40s ease infinite;
