@@ -5,47 +5,47 @@
 
 @layer base {
   :root {
-    --background: 212 40% 98%;
-    --foreground: 37 12% 29%;
-    --card: 0 0% 100%;
-    --card-foreground: 37 12% 29%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 37 12% 29%;
-    --primary: 93 13% 54%;
-    --primary-foreground: 40 30% 98%;
-    --secondary: 212 43% 94%;
-    --secondary-foreground: 37 12% 29%;
-    --muted: 212 43% 94%;
-    --muted-foreground: 220 3% 47%;
-    --accent: 37 28% 90%;
-    --accent-foreground: 37 12% 29%;
+    --background: 39 56% 95%; /* Light Beige */
+    --foreground: 30 20% 25%; /* Dark Earthy Brown */
+    --card: 39 50% 98%; /* Off-white */
+    --card-foreground: 30 20% 25%;
+    --popover: 39 50% 98%;
+    --popover-foreground: 30 20% 25%;
+    --primary: 93 13% 54%; /* Muted Sage Green */
+    --primary-foreground: 30 20% 98%;
+    --secondary: 39 40% 90%; /* Lighter Beige */
+    --secondary-foreground: 30 20% 25%;
+    --muted: 39 40% 90%;
+    --muted-foreground: 30 20% 45%;
+    --accent: 20 40% 85%; /* Soft Terracotta */
+    --accent-foreground: 30 20% 15%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
-    --border: 220 2% 85%;
-    --input: 220 2% 85%;
+    --border: 30 20% 85%;
+    --input: 30 20% 85%;
     --ring: 93 13% 54%;
     --radius: 0.5rem;
   }
 
   .dark {
-    --background: 37 12% 10%;
-    --foreground: 37 28% 85%;
-    --card: 37 12% 15%;
-    --card-foreground: 37 28% 85%;
-    --popover: 37 12% 10%;
-    --popover-foreground: 37 28% 85%;
-    --primary: 93 13% 60%;
-    --primary-foreground: 37 12% 10%;
-    --secondary: 37 12% 20%;
-    --secondary-foreground: 37 28% 85%;
-    --muted: 37 12% 20%;
-    --muted-foreground: 220 2% 65%;
-    --accent: 37 12% 25%;
-    --accent-foreground: 37 28% 90%;
+    --background: 30 15% 12%; /* Deep Olive/Brown */
+    --foreground: 39 40% 85%; /* Light Beige/Cream */
+    --card: 30 15% 15%;
+    --card-foreground: 39 40% 85%;
+    --popover: 30 15% 12%;
+    --popover-foreground: 39 40% 85%;
+    --primary: 93 13% 60%; /* Brighter Sage Green */
+    --primary-foreground: 30 15% 5%;
+    --secondary: 30 10% 20%; /* Darker Greyish Olive */
+    --secondary-foreground: 39 40% 85%;
+    --muted: 30 10% 20%;
+    --muted-foreground: 39 40% 60%;
+    --accent: 20 30% 70%; /* Muted Terracotta */
+    --accent-foreground: 30 15% 95%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
-    --border: 220 3% 30%;
-    --input: 220 3% 30%;
+    --border: 30 10% 30%;
+    --input: 30 10% 30%;
     --ring: 93 13% 60%;
   }
 }
