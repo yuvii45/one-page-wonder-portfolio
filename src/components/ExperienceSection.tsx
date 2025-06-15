@@ -1,3 +1,4 @@
+
 import React from 'react';
 import Section from './Section';
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '@/components/ui/card';
@@ -39,7 +40,7 @@ const ExperienceSection = () => {
               <div key={index} className="relative flex items-center odd:flex-row-reverse group">
                 <div className="absolute left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-primary border-4 border-background"></div>
                 <div className="w-[calc(50%-2rem)]">
-                  <Card className="bg-secondary border-border group-hover:border-primary transition-all duration-300 group-hover:shadow-lg group-hover:-translate-y-1">
+                  <Card className="bg-secondary border-border group-hover:border-primary transition-all duration-300 group-hover:shadow-2xl group-hover:-translate-y-2">
                     <CardHeader>
                       <div className="flex items-start gap-4">
                         <Icon className="w-12 h-12 text-primary flex-shrink-0 mt-1" />
@@ -64,3 +65,4 @@ const ExperienceSection = () => {
 };
 
 export default ExperienceSection;
+
