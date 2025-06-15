@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { ThemeToggle } from './ThemeToggle';
@@ -41,10 +40,7 @@ const Header = () => {
 
   return (
     <header className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-background/80 backdrop-blur-sm border-b border-border' : 'bg-transparent'}`}>
-      <nav className="container mx-auto px-6 py-4 flex justify-between items-center">
-        <a href="#home" className="text-2xl font-bold font-heading text-primary">
-          MyPortfolio
-        </a>
+      <nav className="container mx-auto px-6 py-4 flex justify-end items-center">
         <div className="hidden md:flex items-center space-x-2">
           <NavLinks />
           <ThemeToggle />
@@ -68,4 +64,3 @@ const Header = () => {
 };
 
 export default Header;
-
