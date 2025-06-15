@@ -19,16 +19,16 @@ const ContactSection = () => {
   };
 
   return (
-    <Section id="contact" title="Get In Touch" className="bg-secondary">
+    <Section id="contact" title="Get In Touch">
       <div className="max-w-2xl mx-auto">
         <p className="text-center text-lg text-muted-foreground mb-8">
           Have a project in mind or just want to say hello? Drop me a line!
         </p>
         <form onSubmit={handleSubmit} className="space-y-6">
-          <Input type="text" placeholder="Your Name" required className="bg-background" />
-          <Input type="email" placeholder="Your Email" required className="bg-background" />
-          <Textarea placeholder="Your Message" required rows={5} className="bg-background" />
-          <Button type="submit" size="lg" className="w-full bg-primary hover:bg-primary/90">
+          <Input type="text" placeholder="Your Name" required />
+          <Input type="email" placeholder="Your Email" required />
+          <Textarea placeholder="Your Message" required rows={5} />
+          <Button type="submit" size="lg" className="w-full">
             Send Message
           </Button>
         </form>

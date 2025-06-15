@@ -11,7 +11,7 @@ const Section = ({ id, title, children, className, ...props }: SectionProps) => 
   return (
     <section id={id} className={cn('py-20 lg:py-32', className)} {...props}>
       <div className="container mx-auto px-6">
-        <h2 className="text-3xl md:text-4xl font-bold font-heading text-center mb-12 text-transparent bg-clip-text bg-gradient-to-r from-gray-200 to-gray-400">
+        <h2 className="text-3xl md:text-4xl font-bold font-heading text-center mb-12 text-foreground">
           {title}
         </h2>
         {children}

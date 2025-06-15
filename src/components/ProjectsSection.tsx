@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Section from './Section';
 import { Card, CardContent } from '@/components/ui/card';
@@ -33,10 +32,10 @@ const projects = [
 
 const ProjectsSection = () => {
   return (
-    <Section id="projects" title="Featured Projects" className="bg-secondary">
+    <Section id="projects" title="Featured Projects">
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         {projects.map((project, index) => (
-          <Card key={index} className="bg-background overflow-hidden group transform hover:-translate-y-2 transition-transform duration-300">
+          <Card key={index} className="bg-card overflow-hidden group transition-all duration-300 border hover:shadow-lg hover:border-primary">
             <div className="overflow-hidden">
                 <img src={project.image} alt={project.title} className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300" />
             </div>
@@ -45,7 +44,7 @@ const ProjectsSection = () => {
               <p className="text-muted-foreground mb-4 text-sm">{project.description}</p>
               <div className="flex flex-wrap gap-2 mb-4">
                 {project.tags.map(tag => (
-                  <span key={tag} className="text-xs font-semibold bg-primary/20 text-primary px-2 py-1 rounded-full">{tag}</span>
+                  <span key={tag} className="text-xs font-semibold bg-primary/10 text-primary px-2 py-1 rounded-full">{tag}</span>
                 ))}
               </div>
               <div className="flex justify-end space-x-4">

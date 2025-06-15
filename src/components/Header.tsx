@@ -1,6 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
+import { ThemeToggle } from './ThemeToggle';
 
 const navLinks = [
   { href: '#home', label: 'Home' },
@@ -45,9 +46,11 @@ const Header = () => {
         </a>
         <div className="hidden md:flex items-center space-x-2">
           <NavLinks />
+          <ThemeToggle />
         </div>
-        <div className="md:hidden">
-          <button onClick={() => setIsOpen(!isOpen)}>
+        <div className="md:hidden flex items-center">
+          <ThemeToggle />
+          <button onClick={() => setIsOpen(!isOpen)} className="ml-2">
             {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
         </div>
