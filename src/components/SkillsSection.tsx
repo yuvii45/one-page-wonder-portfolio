@@ -32,7 +32,7 @@ const SkillsSection = () => {
             {skills.map((skill, index) => (
               <Tooltip key={skill.name}>
                 <TooltipTrigger asChild>
-                  <div className="group cursor-pointer">
+                  <div className="group cursor-pointer p-2 animate-gentle-float" style={{ animationDelay: `${index * 200}ms` }}>
                     <div className="relative">
                       {/* Glowing background */}
                       <div className="absolute inset-0 bg-primary/20 rounded-full blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 scale-150"></div>

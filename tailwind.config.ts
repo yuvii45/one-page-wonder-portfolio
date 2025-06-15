@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -100,15 +99,19 @@ export default {
           '50%': { transform: 'translate(0, 40px) scale(1)' },
           '75%': { transform: 'translate(-30px, -20px) scale(0.9)' },
         },
+        'gentle-float': {
+          '0%, 100%': { transform: 'translateY(0px)' },
+          '50%': { transform: 'translateY(-6px)' },
+        },
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
         'fade-in': 'fade-in 0.5s ease-out forwards',
         'blob': 'blob 8s infinite ease-in-out',
+        'gentle-float': 'gentle-float 4s ease-in-out infinite',
 			}
 		}
 	},
 	plugins: [require("tailwindcss-animate")],
 } satisfies Config;
-
