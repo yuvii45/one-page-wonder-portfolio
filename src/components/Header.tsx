@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { ThemeToggle } from './ThemeToggle';
@@ -6,6 +7,7 @@ const navLinks = [
   { href: '#home', label: 'Home' },
   { href: '#experience', label: 'Experience' },
   { href: '#projects', label: 'Projects' },
+  { href: '#skills', label: 'Skills' },
   { href: '#blog', label: 'Blog' },
   { href: '#about', label: 'About' },
   { href: '#contact', label: 'Contact' },
