@@ -42,7 +42,7 @@ const ExperienceSection = () => {
                 key={index}
                 className={cn(
                   'relative flex items-center odd:flex-row-reverse group',
-                  index > 0 && '-mt-12',
+                  index > 0 && '-mt-20',
                   'transition-all duration-300 hover:z-10'
                 )}
               >
