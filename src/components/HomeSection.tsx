@@ -16,13 +16,13 @@ const navLinks = [
 
 const HomeSection = ({ activeSection }: { activeSection: string }) => {
   return (
-    <section id="home" className="h-auto md:h-screen flex flex-col text-center relative p-8 md:py-6 md:px-12 overflow-y-auto bg-background">
+    <section id="home" className="h-auto md:h-screen flex flex-col text-center relative p-6 bg-background">
       <div className="absolute top-6 right-6 z-20">
         <ThemeToggle />
       </div>
 
       {/* Main content area */}
-      <div className="flex-grow flex flex-col items-center justify-center relative z-10 py-4">
+      <div className="flex-grow flex flex-col items-center justify-center relative z-10">
         <div className="flex justify-center mb-6">
           <div className="w-40 h-40 rounded-lg overflow-hidden border-4 border-primary/20 shadow-xl bg-card">
             <img src="/placeholder.svg" alt="Yuvraj Parekh" className="w-full h-full object-cover" />
@@ -44,13 +44,13 @@ const HomeSection = ({ activeSection }: { activeSection: string }) => {
           ]}
           wrapper="p"
           speed={50}
-          className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto min-h-16"
+          className="text-xl md:text-2xl text-muted-foreground mb-6 max-w-2xl mx-auto min-h-16"
           repeat={Infinity}
         />
       </div>
 
       {/* Navigation */}
-      <nav className="relative z-10 pb-4">
+      <nav className="relative z-10">
         <ul className="flex flex-col items-start space-y-1 w-fit mx-auto">
           {navLinks.map((link) => {
             const isActive = activeSection === link.href.substring(1);
@@ -78,7 +78,7 @@ const HomeSection = ({ activeSection }: { activeSection: string }) => {
       </nav>
 
       {/* Socials & Copyright */}
-      <div className="relative z-10 mt-auto pt-4 text-muted-foreground">
+      <div className="relative z-10 mt-auto pt-6 text-muted-foreground">
         <div className="flex justify-center space-x-6 mb-4">
           <a href="#" className="hover:text-primary transition-colors"><Github size={24}/></a>
           <a href="#" className="hover:text-primary transition-colors"><Linkedin size={24}/></a>

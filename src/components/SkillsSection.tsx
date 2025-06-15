@@ -28,7 +28,7 @@ const SkillsSection = () => {
     <Section id="skills" title="My Skills">
       <TooltipProvider delayDuration={100}>
         <div className="flex justify-center">
-          <div className="grid grid-cols-4 sm:grid-cols-6 md:grid-cols-6 gap-x-1 gap-y-1 w-fit">
+          <div className="grid grid-cols-4 sm:grid-cols-6 md:grid-cols-6 gap-4 w-fit">
             {skills.map((skill, index) => (
               <Tooltip key={skill.name}>
                 <TooltipTrigger asChild>
@@ -38,11 +38,11 @@ const SkillsSection = () => {
                       <div className="absolute inset-0 bg-primary/20 rounded-full blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 scale-150"></div>
                       
                       {/* Main skill bubble */}
-                      <div className="relative w-14 h-14 bg-card/80 backdrop-blur-sm border border-border/30 rounded-full flex items-center justify-center shadow-lg group-hover:shadow-primary/25 group-hover:shadow-xl group-hover:scale-110 group-hover:bg-card transition-all duration-300">
+                      <div className="relative w-20 h-20 bg-card/80 backdrop-blur-sm border border-border/30 rounded-full flex items-center justify-center shadow-lg group-hover:shadow-primary/25 group-hover:shadow-xl group-hover:scale-110 group-hover:bg-card transition-all duration-300">
                         <img 
                           src={skill.icon} 
                           alt={skill.name} 
-                          className="h-9 w-9 transition-transform duration-300 group-hover:scale-110" 
+                          className="h-12 w-12 transition-transform duration-300 group-hover:scale-110" 
                         />
                       </div>
                     </div>
