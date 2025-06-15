@@ -2,6 +2,7 @@
 import React from 'react';
 import { TypeAnimation } from 'react-type-animation';
 import { ThemeToggle } from './ThemeToggle';
+import { cn } from '@/lib/utils';
 
 const navLinks = [
   { href: '#experience', label: 'Experience' },
@@ -12,7 +13,7 @@ const navLinks = [
   { href: '#contact', label: 'Contact' },
 ];
 
-const HomeSection = () => {
+const HomeSection = ({ activeSection }: { activeSection: string }) => {
   return (
     <section id="home" className="h-auto md:h-screen flex flex-col text-center relative p-8 md:p-12 overflow-hidden bg-background">
       <div className="absolute top-6 right-6 z-20">
@@ -49,17 +50,29 @@ const HomeSection = () => {
 
       {/* Navigation */}
       <nav className="relative z-10 pb-4">
-        <ul className="flex flex-col items-center space-y-2">
-          {navLinks.map((link) => (
-            <li key={link.href}>
-              <a
-                href={link.href}
-                className="px-3 py-2 text-sm font-heading uppercase tracking-wider text-foreground/80 hover:text-primary transition-colors duration-300"
-              >
-                {link.label}
-              </a>
-            </li>
-          ))}
+        <ul className="flex flex-col items-start space-y-1 w-fit mx-auto">
+          {navLinks.map((link) => {
+            const isActive = activeSection === link.href.substring(1);
+            return (
+              <li key={link.href}>
+                <a
+                  href={link.href}
+                  className={cn(
+                    "group relative inline-block px-3 py-1.5 text-sm font-heading uppercase tracking-wider text-foreground/80 transition-colors duration-300 hover:text-primary",
+                    { "text-primary": isActive }
+                  )}
+                >
+                  {link.label}
+                  <span
+                    className={cn(
+                      "absolute bottom-0 left-0 block h-[1px] bg-primary transition-all duration-300 ease-in-out group-hover:w-full",
+                      isActive ? 'w-full' : 'w-0'
+                    )}
+                  />
+                </a>
+              </li>
+            );
+          })}
         </ul>
       </nav>
 
