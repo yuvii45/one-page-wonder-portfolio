@@ -59,6 +59,28 @@
     --input: 220 15% 25%;
     --ring: 210 90% 65%;
   }
+
+  .synthwave {
+    --background: 240 20% 8%;
+    --foreground: 240 10% 85%;
+    --card: 240 20% 11%;
+    --card-foreground: 240 10% 85%;
+    --popover: 240 20% 8%;
+    --popover-foreground: 240 10% 85%;
+    --primary: 330 90% 60%;
+    --primary-foreground: 330 20% 10%;
+    --secondary: 180 90% 55%;
+    --secondary-foreground: 240 10% 85%;
+    --muted: 240 15% 15%;
+    --muted-foreground: 240 10% 65%;
+    --accent: 280 90% 65%;
+    --accent-foreground: 280 50% 15%;
+    --destructive: 0 70% 55%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 15% 20%;
+    --input: 240 15% 20%;
+    --ring: 330 90% 60%;
+  }
 }
 
 @layer base {
