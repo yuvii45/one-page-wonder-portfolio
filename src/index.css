@@ -1,6 +1,19 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@keyframes animated-gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
 
 @layer base {
   :root {
@@ -58,9 +71,15 @@
   }
   body {
     @apply text-foreground;
-    background-color: hsl(var(--background));
-    background-image: radial-gradient(circle at 15% 50%, hsl(var(--primary) / 0.15), transparent 40%),
-                      radial-gradient(circle at 85% 30%, hsl(var(--accent) / 0.1), transparent 40%);
+    background: linear-gradient(
+      -45deg,
+      hsl(var(--primary)/0.25),
+      hsl(var(--accent)/0.25),
+      hsl(var(--background)),
+      hsl(var(--secondary))
+    );
+    background-size: 400% 400%;
+    animation: animated-gradient 15s ease infinite;
     background-attachment: fixed;
   }
   h1, h2, h3, h4, h5, h6 {
