@@ -21,7 +21,7 @@ const ContactSection = () => {
   return (
     <Section id="contact" title="Get In Touch">
       <div className="max-w-2xl mx-auto">
-        <p className="text-center text-lg text-muted-foreground mb-8">
+        <p className="text-center text-base text-muted-foreground mb-8">
           Have a project in mind or just want to say hello? Drop me a line!
         </p>
         <form onSubmit={handleSubmit} className="space-y-6">

@@ -13,7 +13,7 @@ const AboutSection = () => {
             className="rounded-lg shadow-lg w-full h-auto object-cover" 
           />
         </div>
-        <div className="md:col-span-3 text-lg text-foreground/80 space-y-4">
+        <div className="md:col-span-3 text-base text-foreground/80 space-y-4">
           <p>
             Hello! I'm Yuvraj, a robotics engineer and student passionate about creating intelligent systems that interact with the physical world. My journey is driven by a fascination with the intersection of hardware, software, and artificial intelligence.
           </p>

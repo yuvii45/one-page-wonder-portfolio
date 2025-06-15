@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { TypeAnimation } from 'react-type-animation';
@@ -7,11 +6,11 @@ const HomeSection = () => {
   return (
     <section id="home" className="min-h-screen flex items-center justify-center text-center relative overflow-hidden">
       {/* Background Glows */}
-      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/10 rounded-full filter blur-3xl opacity-50 animate-blob"></div>
-      <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-accent/10 rounded-full filter blur-3xl opacity-50 animate-blob" style={{ animationDelay: '2s' }}></div>
+      <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-primary/10 rounded-full filter blur-3xl opacity-30 animate-blob"></div>
+      <div className="absolute bottom-1/4 right-1/4 w-72 h-72 bg-accent/10 rounded-full filter blur-3xl opacity-30 animate-blob" style={{ animationDelay: '2s' }}></div>
 
       <div className="relative z-10 p-4">
-        <h1 className="text-5xl md:text-7xl font-bold font-heading mb-4 text-primary" style={{ animation: 'fade-in 0.5s ease-out forwards' }}>
+        <h1 className="text-4xl md:text-6xl font-bold font-heading mb-4 text-primary" style={{ animation: 'fade-in 0.5s ease-out forwards' }}>
           Yuvraj Parekh
         </h1>
         <TypeAnimation
@@ -48,4 +47,3 @@ const HomeSection = () => {
 };
 
 export default HomeSection;
-
