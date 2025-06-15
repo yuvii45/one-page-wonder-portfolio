@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { ThemeToggle } from './ThemeToggle';
@@ -40,12 +41,19 @@ const Header = () => {
 
   return (
     <header className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-background/80 backdrop-blur-sm border-b border-border' : 'bg-transparent'}`}>
-      <nav className="container mx-auto px-6 py-4 flex justify-end items-center">
+      <nav className="container mx-auto px-6 py-4 flex justify-center items-center relative">
+        {/* Centered NavLinks for desktop */}
         <div className="hidden md:flex items-center space-x-2">
           <NavLinks />
+        </div>
+
+        {/* ThemeToggle on the right for desktop */}
+        <div className="hidden md:flex items-center absolute right-6">
           <ThemeToggle />
         </div>
-        <div className="md:hidden flex items-center">
+        
+        {/* Mobile menu */}
+        <div className="md:hidden flex items-center w-full justify-end">
           <ThemeToggle />
           <button onClick={() => setIsOpen(!isOpen)} className="ml-2">
             {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
