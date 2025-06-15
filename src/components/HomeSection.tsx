@@ -3,6 +3,7 @@ import React from 'react';
 import { TypeAnimation } from 'react-type-animation';
 import { ThemeToggle } from './ThemeToggle';
 import { cn } from '@/lib/utils';
+import { Github, Linkedin, Instagram } from 'lucide-react';
 
 const navLinks = [
   { href: '#experience', label: 'Experience' },
@@ -75,6 +76,17 @@ const HomeSection = ({ activeSection }: { activeSection: string }) => {
           })}
         </ul>
       </nav>
+
+      {/* Socials & Copyright */}
+      <div className="relative z-10 mt-auto pt-4 text-muted-foreground">
+        <div className="flex justify-center space-x-6 mb-4">
+          <a href="#" className="hover:text-primary transition-colors"><Github size={24}/></a>
+          <a href="#" className="hover:text-primary transition-colors"><Linkedin size={24}/></a>
+          <a href="#" className="hover:text-primary transition-colors"><Instagram size={24}/></a>
+        </div>
+        <p className="text-sm">&copy; {new Date().getFullYear()} Yuvraj Parekh. All rights reserved.</p>
+      </div>
+
 
       {/* Background Glows */}
       <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-primary/10 rounded-full filter blur-3xl opacity-30 animate-blob -z-10"></div>

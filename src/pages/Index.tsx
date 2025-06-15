@@ -1,11 +1,9 @@
-
 import React, { useState } from 'react';
 import HomeSection from '@/components/HomeSection';
 import ExperienceSection from '@/components/ExperienceSection';
 import ProjectsSection from '@/components/ProjectsSection';
 import AboutSection from '@/components/AboutSection';
 import ContactSection from '@/components/ContactSection';
-import Footer from '@/components/Footer';
 import BlogSection from '@/components/BlogSection';
 import SkillsSection from '@/components/SkillsSection';
 
@@ -48,7 +46,6 @@ const Index = () => {
             <BlogSection />
             <AboutSection />
             <ContactSection />
-            <Footer />
           </main>
         </div>
       </div>
