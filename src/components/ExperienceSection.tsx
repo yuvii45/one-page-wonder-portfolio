@@ -31,31 +31,34 @@ const experiences = [
 const ExperienceSection = () => {
   return (
     <Section id="experience" title="My Experience">
-      <div className="max-w-3xl mx-auto space-y-6">
-        {experiences.map((exp, index) => {
-          const Icon = exp.icon;
-          return (
-            <Card key={index} className="transition-colors duration-300 hover:border-primary/50 bg-card/70 backdrop-blur-sm">
-              <CardHeader>
-                <div className="flex items-start gap-4">
-                  <div className="p-3 bg-primary/10 rounded-lg text-primary mt-1">
-                    <Icon className="w-5 h-5" />
-                  </div>
-                  <div className="flex-grow">
-                    <div className="flex flex-wrap items-baseline justify-between gap-x-2">
-                       <CardTitle className="text-lg font-semibold">{exp.role}</CardTitle>
-                       <CardDescription className="text-xs font-mono tracking-wider">{exp.period}</CardDescription>
-                    </div>
-                    <CardDescription>{exp.company}</CardDescription>
-                  </div>
+      <div className="relative max-w-3xl mx-auto">
+        <div className="absolute left-1/2 -translate-x-1/2 w-0.5 h-full bg-border" aria-hidden="true"></div>
+        <div className="space-y-12">
+          {experiences.map((exp, index) => {
+            const Icon = exp.icon;
+            return (
+              <div key={index} className="relative flex items-center odd:flex-row-reverse group">
+                <div className="absolute left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-primary border-4 border-background"></div>
+                <div className="w-[calc(50%-2rem)]">
+                  <Card className="bg-transparent shadow-none border-border group-hover:border-primary transition-all duration-300 group-hover:shadow-xl group-hover:-translate-y-1">
+                    <CardHeader>
+                      <div className="flex items-start gap-4">
+                        <Icon className="w-10 h-10 text-primary flex-shrink-0 mt-1" />
+                        <div>
+                          <CardTitle>{exp.role}</CardTitle>
+                          <CardDescription>{exp.company} | {exp.period}</CardDescription>
+                        </div>
+                      </div>
+                    </CardHeader>
+                    <CardContent>
+                      <p className="text-muted-foreground">{exp.description}</p>
+                    </CardContent>
+                  </Card>
                 </div>
-              </CardHeader>
-              <CardContent className="pl-16 pb-4 pt-0">
-                <p className="text-muted-foreground text-sm">{exp.description}</p>
-              </CardContent>
-            </Card>
-          );
-        })}
+              </div>
+            );
+          })}
+        </div>
       </div>
     </Section>
   );
