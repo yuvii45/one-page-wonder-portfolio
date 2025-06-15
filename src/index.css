@@ -4,13 +4,13 @@
 
 @keyframes animated-gradient {
   0% {
-    background-position: 0% 50%;
+    background-position: 0% 0%;
   }
   50% {
-    background-position: 100% 50%;
+    background-position: 100% 100%;
   }
   100% {
-    background-position: 0% 50%;
+    background-position: 0% 0%;
   }
 }
 
@@ -70,21 +70,39 @@
   }
   body {
     @apply text-foreground;
-    background: linear-gradient(
-      135deg,
-      hsl(var(--primary)/0.1),
-      hsl(var(--accent)/0.1),
-      hsl(var(--background)) 50%,
-      hsl(var(--secondary)/0.1)
-    );
-    background-size: 500% 500%;
-    animation: animated-gradient 25s ease infinite;
+    background-color: hsl(var(--background));
+    background-image: radial-gradient(
+        circle at 15% 50%,
+        hsl(var(--primary) / 0.2),
+        transparent 50%
+      ),
+      radial-gradient(
+        circle at 85% 40%,
+        hsl(var(--accent) / 0.2),
+        transparent 50%
+      ),
+      radial-gradient(
+        circle at 50% 80%,
+        hsl(var(--secondary) / 0.15),
+        transparent 50%
+      );
+    background-size: 200% 200%;
+    animation: animated-gradient 40s ease infinite;
     background-attachment: fixed;
   }
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     @apply font-heading;
   }
-  p, a, li, span, div {
+  p,
+  a,
+  li,
+  span,
+  div {
     @apply font-body;
   }
 }
