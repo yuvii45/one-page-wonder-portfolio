@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Section from './Section';
 import { Card, CardContent } from '@/components/ui/card';
@@ -36,7 +35,7 @@ const ProjectsSection = () => {
     <Section id="projects" title="Featured Projects">
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         {projects.map((project, index) => (
-          <Card key={index} className="bg-card overflow-hidden group transition-all duration-300 border hover:shadow-lg hover:border-primary">
+          <Card key={index} className="bg-card overflow-hidden group transition-all duration-300 border hover:shadow-lg hover:border-primary hover:-translate-y-1">
             <div className="overflow-hidden">
                 <img src={project.image} alt={project.title} className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300" />
             </div>

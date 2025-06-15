@@ -1,7 +1,6 @@
 
 import React from 'react';
 import { Button } from '@/components/ui/button';
-import { ArrowDown } from 'lucide-react';
 import { TypeAnimation } from 'react-type-animation';
 
 const HomeSection = () => {
@@ -40,9 +39,6 @@ const HomeSection = () => {
           </a>
         </div>
       </div>
-       <a href="#experience" className="absolute bottom-12 left-1/2 -translate-x-1/2 animate-bounce">
-          <ArrowDown className="h-8 w-8 text-muted-foreground" />
-        </a>
     </section>
   );
 };
