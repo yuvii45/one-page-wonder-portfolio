@@ -11,7 +11,7 @@ const Footer = () => {
           <a href="#" className="hover:text-primary transition-colors"><Github size={24}/></a>
           <a href="#" className="hover:text-primary transition-colors"><Linkedin size={24}/></a>
         </div>
-        <p>&copy; {new Date().getFullYear()} Jane Doe. All rights reserved.</p>
+        <p>&copy; {new Date().getFullYear()} Yuvraj Parekh. All rights reserved.</p>
       </div>
     </footer>
   );
