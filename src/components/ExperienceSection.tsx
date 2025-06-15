@@ -42,7 +42,7 @@ const ExperienceSection = () => {
                   <Card className="bg-secondary border-border group-hover:border-primary transition-all duration-300 group-hover:shadow-lg group-hover:-translate-y-1">
                     <CardHeader>
                       <div className="flex items-start gap-4">
-                        <Icon className="w-8 h-8 text-primary flex-shrink-0 mt-1" />
+                        <Icon className="w-12 h-12 text-primary flex-shrink-0 mt-1" />
                         <div>
                           <CardTitle>{exp.role}</CardTitle>
                           <CardDescription>{exp.company} | {exp.period}</CardDescription>

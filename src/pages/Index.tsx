@@ -10,7 +10,7 @@ import BlogSection from '@/components/BlogSection';
 
 const Index = () => {
   return (
-    <div className="text-foreground bg-grid-pattern">
+    <div className="text-foreground bg-fancy-pattern">
       <Header />
       <main>
         <HomeSection />
