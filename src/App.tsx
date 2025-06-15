@@ -11,7 +11,7 @@ import { ThemeProvider } from "./components/theme-provider";
 const queryClient = new QueryClient();
 
 const App = () => (
-  <ThemeProvider attribute="class" defaultTheme="dark" themes={['light', 'dark', 'forest']}>
+  <ThemeProvider attribute="class" defaultTheme="light" themes={['light', 'forest', 'ocean']}>
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
         <Toaster />
