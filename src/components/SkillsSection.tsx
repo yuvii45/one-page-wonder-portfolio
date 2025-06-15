@@ -43,16 +43,17 @@ const SkillsSection = () => {
               const x = Math.cos((angle * Math.PI) / 180) * radius;
               const y = Math.sin((angle * Math.PI) / 180) * radius;
               
+              console.log(`Skill ${skill.name} at index ${index}: angle=${angle}, radius=${radius}, x=${x}, y=${y}`);
+              
               return (
                 <Tooltip key={skill.name}>
                   <TooltipTrigger asChild>
                     <div
-                      className="absolute group cursor-pointer animate-fade-in"
+                      className="absolute group cursor-pointer opacity-100"
                       style={{
                         left: '50%',
                         top: '50%',
                         transform: `translate(calc(-50% + ${x}px), calc(-50% + ${y}px))`,
-                        animationDelay: `${index * 0.1}s`,
                       }}
                     >
                       <div className="relative">
