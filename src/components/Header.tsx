@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { ThemeToggle } from './ThemeToggle';
@@ -31,7 +30,7 @@ const Header = () => {
           key={link.href}
           href={link.href}
           onClick={() => setIsOpen(false)}
-          className="px-3 py-2 text-foreground/80 hover:text-primary transition-colors duration-300"
+          className="px-3 py-2 text-sm font-heading uppercase tracking-wider text-foreground/80 hover:text-primary transition-colors duration-300"
         >
           {link.label}
         </a>
