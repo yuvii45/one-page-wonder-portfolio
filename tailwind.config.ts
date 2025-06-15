@@ -20,8 +20,8 @@ export default {
 		},
 		extend: {
       fontFamily: {
-        heading: ['Bitter', 'serif'],
-        body: ['Raleway', 'sans-serif'],
+        heading: ['Merriweather', 'serif'],
+        body: ['Alegreya Sans', 'sans-serif'],
       },
 			colors: {
 				border: 'hsl(var(--border))',
