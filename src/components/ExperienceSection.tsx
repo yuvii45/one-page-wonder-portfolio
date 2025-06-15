@@ -2,29 +2,29 @@
 import React from 'react';
 import Section from './Section';
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '@/components/ui/card';
-import { Briefcase, Building, Factory } from 'lucide-react';
+import { Brain, Cpu, Wrench } from 'lucide-react';
 
 const experiences = [
   {
-    role: 'Senior Frontend Developer',
+    role: 'Lead Robotics Engineer',
     company: 'Tech Solutions Inc.',
     period: '2022 - Present',
-    description: 'Leading the development of a large-scale e-commerce platform using React, Next.js, and TypeScript. Responsible for architecture decisions, code quality, and mentoring junior developers.',
-    icon: Briefcase,
+    description: 'Leading the development of autonomous systems, focusing on perception and control algorithms. Responsible for system architecture, performance optimization, and mentoring a team of engineers.',
+    icon: Brain,
   },
   {
-    role: 'Frontend Developer',
+    role: 'Robotics Software Engineer',
     company: 'Innovate Co.',
     period: '2020 - 2022',
-    description: 'Developed and maintained several client-facing websites and applications. Worked closely with UI/UX designers to translate mockups into pixel-perfect, responsive web pages.',
-    icon: Building,
+    description: 'Developed and maintained software for robotic platforms. Worked closely with hardware teams to integrate sensors and actuators, and implemented path planning algorithms.',
+    icon: Cpu,
   },
   {
-    role: 'Junior Web Developer',
-    company: 'WebCrafters',
+    role: 'Engineering Intern',
+    company: 'Automation Labs',
     period: '2019 - 2020',
-    description: 'Assisted in the development of WordPress sites and learned the fundamentals of HTML, CSS, and JavaScript in a professional environment.',
-    icon: Factory,
+    description: 'Assisted in the design and testing of robotic components. Gained hands-on experience with CAD software, sensor calibration, and data analysis.',
+    icon: Wrench,
   },
 ];
 

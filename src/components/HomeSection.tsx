@@ -13,13 +13,13 @@ const HomeSection = () => {
         </h1>
         <TypeAnimation
           sequence={[
-            'A Creative Frontend Developer.',
+            'A Robotics Engineer.',
             2000,
-            'I build beautiful web experiences.',
+            'I build intelligent systems.',
             2000,
-            'I build usable web interfaces.',
+            'I solve complex optimization problems.',
             2000,
-            "Let's build something amazing together.",
+            'Specializing in AI and Machine Learning.',
             2000,
           ]}
           wrapper="p"

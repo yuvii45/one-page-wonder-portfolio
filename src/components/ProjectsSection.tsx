@@ -1,3 +1,4 @@
+
 import React from 'react';
 import Section from './Section';
 import { Card, CardContent } from '@/components/ui/card';
@@ -5,26 +6,26 @@ import { ExternalLink, Github } from 'lucide-react';
 
 const projects = [
   {
-    title: 'Project Alpha',
-    description: 'A cutting-edge data visualization dashboard built with React and D3.js for a fintech client.',
-    tags: ['React', 'TypeScript', 'D3.js', 'SCSS'],
-    image: `https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?ixlib=rb-4.0.3&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=600&h=400&fit=crop`,
+    title: 'Autonomous Navigation System',
+    description: 'Developed a SLAM-based navigation algorithm for a mobile robot, enabling it to map and navigate unknown environments.',
+    tags: ['ROS', 'Python', 'SLAM', 'OpenCV'],
+    image: `https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-4.0.3&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=600&h=400&fit=crop`,
     liveUrl: '#',
     repoUrl: '#',
   },
   {
-    title: 'E-commerce Store',
-    description: 'A full-featured online store with a custom CMS, payment gateway integration, and user accounts.',
-    tags: ['Next.js', 'Stripe', 'GraphQL', 'Tailwind CSS'],
+    title: 'ML Model Optimization',
+    description: 'An exploration of various optimization techniques to improve the performance and efficiency of deep learning models for image recognition.',
+    tags: ['PyTorch', 'TensorFlow', 'Optimization', 'AI'],
     image: `https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=600&h=400&fit=crop`,
     liveUrl: '#',
     repoUrl: '#',
   },
   {
-    title: 'Portfolio Website',
-    description: 'This very portfolio website, built to be fast, responsive, and showcase my skills.',
-    tags: ['React', 'Vite', 'Tailwind CSS', 'Framer Motion'],
-    image: `https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=600&h=400&fit=crop`,
+    title: 'Robotic Arm Controller',
+    description: 'Designed and built a web-based interface to control a 6-DOF robotic arm in real-time, using inverse kinematics.',
+    tags: ['React', 'WebSockets', 'Robotics', 'TypeScript'],
+    image: `https://images.unsplash.com/photo-1531297484001-80022131f5a1?ixlib=rb-4.0.3&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=600&h=400&fit=crop`,
     liveUrl: '#',
     repoUrl: '#',
   },
