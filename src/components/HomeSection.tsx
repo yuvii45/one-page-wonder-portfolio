@@ -2,6 +2,7 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowDown } from 'lucide-react';
+import { TypeAnimation } from 'react-type-animation';
 
 const HomeSection = () => {
   return (
@@ -10,9 +11,23 @@ const HomeSection = () => {
         <h1 className="text-5xl md:text-7xl font-bold font-heading mb-4 text-primary" style={{ animation: 'fade-in 0.5s ease-out forwards' }}>
           Yuvraj Parekh
         </h1>
-        <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto" style={{ animation: 'fade-in 0.5s ease-out 0.2s forwards', opacity: 0 }}>
-          Creative Frontend Developer | Building Beautiful & Usable Web Experiences
-        </p>
+        <TypeAnimation
+          sequence={[
+            'A Creative Frontend Developer.',
+            2000,
+            'I build beautiful web experiences.',
+            2000,
+            'I build usable web interfaces.',
+            2000,
+            "Let's build something amazing together.",
+            2000,
+          ]}
+          wrapper="p"
+          speed={50}
+          className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto min-h-16"
+          style={{ animation: 'fade-in 0.5s ease-out 0.2s forwards', opacity: 0 }}
+          repeat={Infinity}
+        />
         <div className="flex justify-center gap-4" style={{ animation: 'fade-in 0.5s ease-out 0.4s forwards', opacity: 0 }}>
           <a href="#projects">
             <Button size="lg">
