@@ -27,15 +27,17 @@ const SkillsSection = () => {
   return (
     <Section id="skills" title="My Skills">
       <TooltipProvider delayDuration={100}>
-        <div className="flex flex-wrap justify-center items-center gap-4 md:gap-6">
-          {skills.map((skill) => (
+        <div className="flex flex-wrap justify-center items-center gap-1 max-w-4xl mx-auto">
+          {skills.map((skill, index) => (
             <Tooltip key={skill.name}>
               <TooltipTrigger asChild>
                 <div
-                  className="group w-28 h-[129px] flex items-center justify-center cursor-pointer"
+                  className={`group w-20 h-[92px] flex items-center justify-center cursor-pointer ${
+                    index % 2 === 1 ? 'translate-y-6' : ''
+                  }`}
                 >
-                  <div className="clip-hexagon w-full h-full bg-card group-hover:bg-primary/10 border border-border/80 group-hover:border-primary transition-all duration-300 flex items-center justify-center">
-                    <img src={skill.icon} alt={skill.name} className="h-9 w-9 transition-transform duration-300 group-hover:scale-110" />
+                  <div className="clip-hexagon w-full h-full bg-card group-hover:bg-primary/10 border border-border/50 group-hover:border-primary transition-all duration-300 flex items-center justify-center">
+                    <img src={skill.icon} alt={skill.name} className="h-7 w-7 transition-transform duration-300 group-hover:scale-110" />
                   </div>
                 </div>
               </TooltipTrigger>
